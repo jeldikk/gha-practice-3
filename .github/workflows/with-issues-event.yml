@@ -1,0 +1,10 @@
+name: Practice Challenge Workflow with issues event and some types
+on:
+    issues:
+        types: [opened, edited]
+jobs:
+    show_issue:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Issue Details
+              run: echo "${{ github.event}}"
